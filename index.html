@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="Assets/Css/stylesheet.css"> 
+</head>
+<body>
+  <header class="navbar"> 
+    <h1 class="navbarTitle">Bookshelf Apps</h1>
+  </header> 
+    <main>
+        <div class="flexContainer"> 
+            <section id="bagianPencarian"> 
+                <h2>Cari Buku</h2> 
+                <form id="cariBuku"> 
+                    <input id="cariJudul" type="text" placeholder="masukan judul">
+                </form>  
+                <button id="tombolCari" type="submit">Cari</button>
+            </section>  
+            <section id="tambahBuku">  
+                <h2>Masukan Buku Baru</h2>
+                <form id="tambahBuku">
+                    <div class="input">
+                        <label for="tambahJudulBuku">Judul</label> <br>
+                        <input id="tambahJudulBuku" type="text" placeholder="contoh: Atomic Habits">
+                    <div class="input">
+                        <label for="tambahIdBuku">ISBN</label> <br>
+                        <input id="tambahIdBuku" type="text" placeholder="contoh: 9781847941831">
+                    </div>
+                    <div class="input">
+                        <label for="tambahPenulisBuku">Penulis</label> 
+                        <br>
+                        <input id="tambahPenulisBuku" type="text" placeholder="contoh: James Clear">
+                    </div>
+                    <div class="input tahun ">
+                        <label for="tambahTahunTerbit">Tahun</label>
+                        <br>
+                        <input id="tambahTahunTerbit" type="text" maxlength="4" placeholder="contoh: 2018">
+                    </div>
+                    <div class="checklist-belum checklist">
+                        <label for="checklistBelumSelesai">Belum selesai dibaca</label>
+                        <input id="checklistBelumSelesai" type="checkbox" onclick="aktifBelum()"  required>
+                    </div>
+                    <div class="checklist-selesai checklist">
+                        <label for="checklistSelesai">Selesai dibaca</label>                        
+                        <input id="checklistSelesai" type="checkbox" onclick="aktifSudah()"  required>
+                    </div>
+                    <br>
+                    <button id="bookSubmit" type="submit">Masukkan Buku ke rak </button>
+                </form>
+            </section> 
+            <section id="belumBaca">
+                <h2>Belum Dibaca</h2> 
+                <div id="daftarBelumDibaca" class="daftarBuku">
+                    <!-- <article class="book_item">
+                            <h3>harry potter : order of the phoenix</h3>
+                            <p>Id Buku: 3657848524</p>
+                            <p>Penulis: John Doe</p>
+                            <p>Tahun: 2002</p>
+
+                            <div class="action">
+                                <button class="green">Selesai dibaca</button>
+                                <button class="red">Hapus buku</button>
+                            </div>
+                        </article> -->
+                </div>
+            </section>
+            <section id="sudahBaca">
+                <h2>Sudah Dibaca</h2> 
+                <div id="dafarSudahDibaca" class="daftarBuku">
+                     <!-- <article class="book_item">
+                            <h3>Book Title</h3>
+                            <p>Id Buku: 3657848524</p>
+                            <p>Penulis: John Doe</p>
+                            <p>Tahun: 2002</p>
+
+                            <div class="action">
+                                <button class="yellow">Belum selesai  dibaca</button>
+                                <button class="red">Hapus buku</button>
+                            </div>
+                        </article> -->
+                </div>
+            </section> 
+        </div>
+    </main>    
+    <script src="Assets\Js\storage.js"></script>
+    <script src="Assets\Js\script.js"></script>
+    <script src="Assets\Js\dom.js"></script>
+</body>
+</html>
